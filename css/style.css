@@ -82,3 +82,37 @@ a:hover {
 .separator-or::before {
     content: "\00a0\00a0|\00a0\00a0";
 }
+
+.the-content {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border-radius: 100%;
+    width: 30%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.about-me {
+    padding-top: 5%;
+    padding-left: 4%;
+    width: 30%;
+}
+
+.about-me {
+    font-weight: 600;
+    font-size: xx-large;
+}
+
+.about-sub {
+    font-weight: 600;
+    font-size: medium;
+    margin-top: 1%;
+}
+
+.about-text {
+    font-weight: 300;
+    font-size: small;
+}
