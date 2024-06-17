@@ -1,6 +1,7 @@
 body {
     margin: 0;
     width: 100vw;
+    height: 100vh;
     background-color: rgb(146, 138, 255);
 }
 
@@ -15,13 +16,22 @@ body {
 }
 
 .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    margin-top: 1%;
+    height: 100%;
+    /* margin-top: 1%; */
 }
 
 .container {
-    margin: auto;
+    /* margin: auto; */
     width: 95%;
+}
+
+.nav-con {
+    height: 5%;
+    display: flex;
 }
 
 .navbar {
@@ -84,7 +94,7 @@ a:hover {
 }
 
 .about-con {
-    height: 81.19vh;
+    height: 80%;
 }
 
 .the-content {
@@ -96,14 +106,14 @@ a:hover {
 
 img {
     border-radius: 100%;
-    width: 30%;
+    height: 70%;
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
 
 .about-me {
-    padding-top: 5%;
-    padding-left: 4%;
+    /* padding-top: 5%; */
+    padding-left: 4%; 
     width: 30%;
 }
 
@@ -124,8 +134,7 @@ img {
 }
 
 .footer-con {
-    bottom: 0;
-    position: sticky;
+    height: 15%;
 }
 
 .separator-line {
@@ -140,15 +149,16 @@ img {
 
 .box {
     width: 25%;
+    margin-top: 1.5%;
 }
 
 .footer-title {
-    padding-top: 5%;
-    padding-bottom: 2%;
+    /* padding-top: 5%;
+    padding-bottom: 2%; */
     font-weight: 600;
 }
 
 .footer-text {
     font-weight: 300;
-    padding-bottom: 5%;
+    /* padding-bottom: 5%; */
 }
