@@ -116,3 +116,33 @@ img {
     font-weight: 300;
     font-size: small;
 }
+
+.footer-con {
+    bottom: 0;
+    position: sticky;
+}
+
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(215, 215, 215);
+}
+
+.footer {
+    display: flex;
+}
+
+.box {
+    width: 25%;
+}
+
+.footer-title {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-weight: 600;
+}
+
+.footer-text {
+    font-weight: 300;
+    padding-bottom: 5%;
+}
