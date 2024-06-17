@@ -1,6 +1,33 @@
 body {
     margin: 0;
     width: 100vw;
-    height: 100vh;
     background-color: rgb(146, 138, 255);
+}
+
+.container-fluid {
+    width: 100%;
+    margin-top: 1%;
+}
+
+.container {
+    margin: auto;
+    width: 90%;
+}
+
+.left-content {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 2%;
+    aspect-ratio: 1 /1;
+    background-color: white;
+    border-radius: 100%;
+    margin: 0;
+}
+
+.name {
+    width: auto;
+    margin-left: 1%;
 }
