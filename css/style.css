@@ -250,7 +250,7 @@ body {
 }
 
 .container {
-    min-width: 90%;
+    max-width: 90%;
 }
 
 .navbar {
