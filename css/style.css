@@ -1,7 +1,20 @@
+/* @media screen and (max-width: 768px) {
+    .right-content::before {
+        content: "Click Me!";
+    }
+    .separator-or::before {
+        display: none;
+    }
+    .links {
+        display: none;
+    }
+    .right-content:hover > * {
+        display: block;
+    }
+}
+
 body {
     margin: 0;
-    width: 100vw;
-    height: 100vh;
     background-color: rgb(245, 245, 245);
 }
 
@@ -19,14 +32,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    /* margin-top: 1%; */
 }
 
 .container {
-    /* margin: auto; */
-    width: 95%;
+    min-width: 95%;
 }
 
 .nav-con {
@@ -42,19 +51,26 @@ body {
 
 .left-content {
     display: flex;
-    width: 50%;
+    width: 70%;
     align-items: center;
 }
 
 .right-content {
     display: flex;
-    width: 50%;
+    width: 30%;
     align-items: center;
     justify-content: flex-end;
 }
 
+.dropdown-nav {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: white;
+}
+
 .circle {
-    width: 2vw;
+    min-width: 20px;
     aspect-ratio: 1 /1;
     background-color: #7c8fff;
     border-radius: 100%;
@@ -62,13 +78,15 @@ body {
 }
 
 .name {
-    width: auto;
+    min-width: clamp(260px, 2.5vw, 400px);
     margin-left: 1%;
     font-weight: 600;
+    font-size: clamp(15px, 1.2vw, 20px);
 }
 
 .degree {
-    font-size: x-small;
+    min-width: clamp(230px, 2.2vw, 300px);
+    font-size: clamp(12px, 1vw, 15px);
 }
 
 .degree::before {
@@ -86,7 +104,7 @@ a:hover {
 }
 
 .links {
-    font-size: medium;
+    font-size: .8rem;
 }
 
 .separator-or::before {
@@ -106,15 +124,15 @@ a:hover {
 
 img {
     border-radius: 100%;
-    height: 70%;
+    max-width: 300px;
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
 
 .about-me {
-    /* padding-top: 5%; */
+    /* padding-top: 5%; 
     padding-left: 4%; 
-    width: 30%;
+    max-width: 40%;
 }
 
 .about-me {
@@ -155,11 +173,214 @@ img {
 
 .footer-title {
     /* padding-top: 5%;
-    padding-bottom: 2%; */
+    padding-bottom: 2%; 
     font-weight: 600;
 }
 
 .footer-text {
     font-weight: 300;
-    /* padding-bottom: 5%; */
+    /* padding-bottom: 5%; 
+} */
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        display: none !important;
+    }
+    .right-content::before {
+        content: "Click Me!"
+    }
+    .dropdown-nav {
+        display: none;
+    }
+    .separator-or::before {
+        content: "\00a0" !important;
+    }
+    .right-content {
+        align-items: baseline !important;
+    }
+    .right-content:hover .dropdown-nav {
+        display: block;
+    }
+
+    .the-content {
+        flex-direction: column;
+        padding-top: 3vh;
+    }
+    .about-me {
+        max-width: 80% !important;
+        padding-top: 20px;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+}
+
+.poppins-font {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.mono-font {
+    font-family: monospace;
+    font-style: normal;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    min-width: 90%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.left-content {
+    min-width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.right-content {
+    min-width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.circle {
+    max-width: 20px;
+    min-width: 20px;
+    aspect-ratio: 1 /1;
+    background-color: #7c8fff;
+    border-radius: 100%;
+    margin: 0;
+}
+
+.name {
+    min-width: clamp(260px, 2.5vw, 400px);
+    margin-left: 1%;
+    font-weight: 600;
+    font-size: clamp(15px, 1.2vw, 20px);
+}
+
+.degree {
+    min-width: clamp(230px, 2.2vw, 300px);
+    font-size: clamp(11px, 1vw, 15px);
+}
+
+.degree::before {
+    content: "\00a0\00a0\00a0";
+}
+
+.main-nav {
+    display: flex;
+}
+
+.dropdown-nav {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    min-width: 110px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #7c8fff;
+}
+
+.links {
+    font-size: .8rem;
+}
+
+.separator-or::before {
+    content: "\00a0\00a0|\00a0\00a0";
+}
+
+.about-con {
+    height: 80%;
+}
+
+.the-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: clamp(38px, 5%, 45px);
+}
+
+img {
+    border-radius: 100%;
+    max-width: 300px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.about-me {
+    padding-left: 4%; 
+    max-width: 40%;
+}
+
+.about-me {
+    font-weight: 600;
+    font-size: clamp(30px, 2.5vw, 80px);
+}
+
+.about-sub {
+    font-weight: 600;
+    font-size: medium;
+    margin-top: 1%;
+}
+
+.about-text {
+    font-weight: 300;
+    font-size: small;
+    text-align: justify;
+}
+
+.footer-con {
+    padding-top: 30px;
+    height: 15%;
+}
+
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(215, 215, 215);
+}
+
+.footer {
+    display: flex;
+}
+
+.box {
+    width: 25%;
+    margin-top: 1.5%;
+}
+
+.footer-title {
+    padding-top: 5%;
+    padding-bottom: 2%; 
+    font-weight: 600;
+    font-size: clamp(14px, 2.2vw, 20px);
+}
+
+.footer-text {
+    font-weight: 300;
+    padding-bottom: 5%;
+    font-size: clamp(10px, 1.5vw, 20px);
 }
