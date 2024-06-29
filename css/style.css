@@ -212,6 +212,22 @@ img {
     }
 }
 
+@media screen and (max-width: 568px) {
+    .left-content {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 443px) {
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box {
+        width: 45% !important;
+    }
+}
+
 body {
     margin: 0;
     background-color: rgb(245, 245, 245);
@@ -265,10 +281,10 @@ body {
 }
 
 .name {
-    min-width: clamp(260px, 2.5vw, 400px);
+    min-width: clamp(221px, 2.5vw, 400px);
     margin-left: 1%;
     font-weight: 600;
-    font-size: clamp(15px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
 }
 
 .degree {
