@@ -216,6 +216,9 @@ img {
     .left-content {
         flex-wrap: wrap;
     }
+    .container {
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 443px) {
@@ -250,7 +253,7 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    min-width: 90%;
 }
 
 .navbar {
@@ -281,7 +284,7 @@ body {
 }
 
 .name {
-    min-width: clamp(221px, 2.5vw, 400px);
+    min-width: clamp(221px, 21vw, 400px);
     margin-left: 1%;
     font-weight: 600;
     font-size: clamp(13px, 1.2vw, 20px);
@@ -289,7 +292,7 @@ body {
 
 .degree {
     min-width: clamp(230px, 2.2vw, 300px);
-    font-size: clamp(11px, 1vw, 15px);
+    font-size: clamp(11px, 1vw, 12px);
 }
 
 .degree::before {
@@ -386,6 +389,7 @@ img {
 .box {
     width: 25%;
     margin-top: 1.5%;
+    padding-left: 1%;
 }
 
 .footer-title {
